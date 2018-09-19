@@ -17,8 +17,7 @@ A later version will provide an alternative user experience in which business us
 
 ## Prototype Demo
 
-- A prototype of the application and simulates a business user journey for setting up central budgets for a business.
-- Please download and view business user journey for the Media Budgie Application here:
+- A prototype of the application simulating a business user journey for setting up central budgets for a business is available here:
 https://github.com/Kremzeeq/MediaBudgieBudgetingTool/blob/master/MediaBudgiePrototype.pdf
  
 ## Project Programming Tools
