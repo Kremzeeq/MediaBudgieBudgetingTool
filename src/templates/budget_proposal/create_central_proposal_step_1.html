@@ -1,0 +1,39 @@
+{% extends "budget_proposal/proposals_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-5">Create Central Proposal</h1>
+    <p class="lead">Step 1: Distribute central budget between countries and products</p>
+    <hr class="my-4">
+    <p class="lead">Please ensure the budget total adds up to: <strong> ${{central_budget.central_budget_value}}</strong></p>
+        <form action="{{ url_for('budget_proposal.create_central_proposal_step_1', central_budget_id=central_budget._id)}}" method="post">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                    <th scope="col">Products</th>
+                    {% for country in countries %}
+                    <th scope="col">{{ country.country_name }}</th>
+                    {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                    <th scope="row">{{ product.product_name }}</th>
+                    {% for country in countries %}
+                    <td>
+                        <div class="form-group">
+                            <input class="text" class="form-control" name="product_id_{{product._id}}_country_id_{{country._id}}" value=0 placeholder="0">
+                        </div>
+                    </td>
+                    {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary btn-success">Next</button>
+        </form>
+</div>
+
+{% endblock %}

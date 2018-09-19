@@ -1,0 +1,28 @@
+{% extends "users/users_base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-5">Registration Portal</h1>
+    <hr class="my-4">
+    <p class="lead">Please ensure enter your email and new password</p>
+    <form action="{{ url_for('users.register_user') }}" method="post">
+        <div class="form-size">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                <hr class="my-4">
+            </div>
+            <div id="password-section" class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                <hr class="my-4">
+                <button type="submit" class="btn btn-primary btn-dark">Submit</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+

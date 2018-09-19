@@ -1,0 +1,24 @@
+{% extends "central_budget/central_budgets_base.html" %}
+
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-5">Active Central Budgets</h1>
+        <p class="lead">Central budgets displayed for individual years</p>
+        <hr class="my-4">
+        <div class="list_group">
+            {% for central_budget in central_budgets %}
+                <a href="{{ url_for('central_budget.central_budget_page', central_budget_id=central_budget._id)}}" class="list-group-item">
+                <h4 class="List-group-item-title">Budgeting Year: {{central_budget.budget_year}}</h4>
+                <p class="list-group-item-text">Central Budget Total: <strong> ${{ central_budget.central_budget_value}}</strong></p>
+                <p class="list-group-item-text">Status: <strong> {{ central_budget.status}}</strong></p>
+                </a>
+            {% endfor %}
+        </div>
+        <hr class="my-4">
+        <a class="btn btn-success" href="{{ url_for('central_budget.create_budget_step_1')}}" role="button">Create New Central Budget</a>
+
+    </div>
+
+{% endblock %}

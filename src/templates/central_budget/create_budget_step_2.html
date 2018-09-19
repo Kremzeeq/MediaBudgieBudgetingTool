@@ -1,0 +1,26 @@
+{% extends "central_budget/central_budgets_base.html" %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-5">Create Central Budget</h1>
+    <p class="lead">Step 2: Tick all Countries for which local budgets will be assigned</p>
+    <hr class="my-4">
+    <form action="{{ url_for('central_budget.create_budget_step_2',central_budget_id=central_budget._id)}}" method="post">
+        <div class="form-size">
+            {% for country_doc in country_docs %}
+            <div class="form-check">
+                <input class="form-check-input" name="country_ids" type="checkbox" value="{{country_doc._id}}" id="country_doc_id">
+                <label class="form-check-label" for="country_doc_id">{{country_doc.country_name}}</label>
+            </div>
+            {% endfor %}
+            <hr class="my-4">
+            <button type="submit" class="btn btn-primary btn-dark">Next</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+

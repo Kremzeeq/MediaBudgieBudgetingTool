@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-5">About Media Budgie</h1>
+    <p class="lead">Media Budgie provides a portal for monitoring media budgets across European markets</p>
+    <hr class="my-4">
+    <p class="lead">This beta version provides a framework for your annual budgeting process</p>
+    <a class="btn btn-primary btn-lg btn-dark" href="{{ url_for('users.login_user')}}" role="button">Get Started</a>
+
+</div>
+
+{% endblock %}

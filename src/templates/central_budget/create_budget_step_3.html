@@ -1,0 +1,26 @@
+{% extends "central_budget/central_budgets_base.html" %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-5">Create Central Budget</h1>
+    <p class="lead">Step 3: Tick all Products for which local budgets will be assigned</p>
+    <hr class="my-4">
+    <form action="{{ url_for('central_budget.create_budget_step_3',central_budget_id=central_budget._id)}}" method="post">
+        <div class="form-size">
+            {% for product_doc in product_docs %}
+            <div class="form-check">
+                <input class="form-check-input" name="product_ids" type="checkbox" value="{{product_doc._id}}" id="product_doc._id">
+                <label class="form-check-label" for="product_doc._id">{{product_doc.product_name}}</label>
+            </div>
+            {% endfor %}
+            <hr class="my-4">
+            <button type="submit" class="btn btn-primary btn-dark">Save Central Budget</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+

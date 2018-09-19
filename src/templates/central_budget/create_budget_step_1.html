@@ -1,0 +1,26 @@
+{% extends "central_budget/central_budgets_base.html" %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-5">Create Central Budget</h1>
+    <p class="lead">Step 1: Set central budget available for budgetary year</p>
+    <hr class="my-4">
+    <div class="form-size">
+        <form action="{{ url_for('central_budget.create_budget_step_1')}}" method="post">
+            <div class="form-group">
+                <label for="year">Budgetary Year</label>
+                <input type="text" class="form-control" id="year" name="year" placeholder="2019">
+            </div>
+            <div class="form-group">
+                <label for="central_budget_value">Central Budget Value ($)</label>
+                <input type="text" class="form-control" id="central_budget_value" name="central_budget_value" placeholder="e.g. 4000000">
+            </div>
+            <hr class="my-4">
+            <button type="submit" class="btn btn-primary btn-dark">Next</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

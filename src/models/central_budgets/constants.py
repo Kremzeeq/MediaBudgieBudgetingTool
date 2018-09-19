@@ -1,0 +1,2 @@
+
+COLLECTION = "central_budgets"

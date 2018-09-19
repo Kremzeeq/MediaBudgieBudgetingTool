@@ -1,0 +1,1 @@
+COLLECTION = "local_currency_to_US_dollar_exchange_rates"

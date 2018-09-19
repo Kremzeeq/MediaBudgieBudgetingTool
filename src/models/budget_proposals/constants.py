@@ -1,0 +1,2 @@
+
+COLLECTION = "budget_proposals"
