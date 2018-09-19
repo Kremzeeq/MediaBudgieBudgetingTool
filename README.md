@@ -17,8 +17,9 @@ A later version will provide an alternative user experience in which business us
 
 ## Prototype Demo
 
-- Prototype of the application and simulates a business user journey for setting up central budgets
-- Please view business user journey for the Media Budgie Application here:
+- A prototype of the application and simulates a business user journey for setting up central budgets for a business.
+- Please download and view business user journey for the Media Budgie Application here:
+https://github.com/Kremzeeq/MediaBudgieBudgetingTool/blob/master/MediaBudgiePrototype.pdf
  
 ## Project Programming Tools
  
@@ -67,15 +68,6 @@ https://docs.mongodb.com/manual/administration/install-community/
 - Please ensure the run.py file is running so the URI can be accessed
 - Once registered and during other sessions, all you would need to do is login to view budgeting-related webpages. 
 
-## Prototype Demo
-
-- A prototype of the application and simulates a business user journey for setting up central budgets for a business.
-- Please download and view business user journey for the Media Budgie Application here:
-https://github.com/Kremzeeq/MediaBudgieBudgetingTool/blob/master/MediaBudgiePrototype.pdf
-
 **Copyright: Sian Thompson (Kremzeeq)**
 
 Author Email: sian.thompson@gmx.co.uk
-
-
-
